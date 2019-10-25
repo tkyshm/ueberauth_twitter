@@ -98,7 +98,7 @@ defmodule Ueberauth.Strategy.Twitter.OAuth do
   end
 
   defp decode_response({:error, %{reason: reason}}) do
-    {:error, "#{reason}"}
+    {:error, "#{inspect(reason)}"}
   end
 
   defp decode_response(error) do
